@@ -26,9 +26,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: Bump version and push tag
         uses: laputansoft/github-tag-action@v4.6
-          with:
-            github_token: ${{ env.github-token }}
-            tag: ${{ steps.package-version.outputs.version }}
+        with:
+          github_token: ${{ env.github-token }}
+          tag: ${{ steps.package-version.outputs.version }}
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
